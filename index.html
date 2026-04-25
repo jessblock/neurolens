@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0057)file:///C:/Users/jessi/Downloads/neurolens-landing_2.html -->
+<!-- saved from url=(0057)file:///C:/Users/jessi/Downloads/neurolens-landing_3.html -->
 <html lang="pt-BR" data-theme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -559,11 +559,11 @@ footer {
 </head>
 <body>
 
-<a href="file:///C:/Users/jessi/Downloads/neurolens-landing_2.html#questionarios" class="skip-link">Ir para os questionários</a>
+<a href="file:///C:/Users/jessi/Downloads/neurolens-landing_3.html#questionarios" class="skip-link">Ir para os questionários</a>
 
 <!-- NAV -->
 <nav role="banner">
-  <a href="file:///C:/Users/jessi/Downloads/neurolens-landing_2.html#" class="logo" aria-label="Neuro Lens — início">
+  <a href="file:///C:/Users/jessi/Downloads/neurolens-landing_3.html#" class="logo" aria-label="Neuro Lens — início">
     <span class="logo-mark" aria-hidden="true">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
         <circle cx="12" cy="12" r="4"></circle>
@@ -590,8 +590,8 @@ footer {
     Questionários de triagem para reconhecer padrões de TEA e TDAH — em você, em quem você convive ou nos seus filhos. Desenvolvidos com base nos critérios do DSM-5.
   </p>
   <div class="hero-actions">
-    <a href="file:///C:/Users/jessi/Downloads/neurolens-landing_2.html#questionarios" class="btn btn-solid">Ver os questionários</a>
-    <a href="file:///C:/Users/jessi/Downloads/neurolens-landing_2.html#como-funciona" class="btn btn-outline">Como funciona</a>
+    <a href="file:///C:/Users/jessi/Downloads/neurolens-landing_3.html#questionarios" class="btn btn-solid">Ver os questionários</a>
+    <a href="file:///C:/Users/jessi/Downloads/neurolens-landing_3.html#como-funciona" class="btn btn-outline">Como funciona</a>
   </div>
 </section>
 
@@ -701,6 +701,7 @@ footer {
 </footer>
 
 <script>
+  // Tema
   function toggleTheme() {
     const html = document.documentElement;
     const isDark = html.getAttribute('data-theme') === 'dark';
@@ -708,11 +709,25 @@ footer {
     document.querySelector('.theme-btn').textContent = isDark ? 'Modo escuro' : 'Modo claro';
   }
 
-  // Respeitar preferência do sistema na carga
   if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.documentElement.setAttribute('data-theme', 'dark');
     document.querySelector('.theme-btn').textContent = 'Modo claro';
   }
+
+  // Scroll suave garantido via JS para todos os links âncora
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href').slice(1);
+        if (!targetId) return;
+        const target = document.getElementById(targetId);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  });
 </script>
 
 
