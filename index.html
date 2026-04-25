@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0057)file:///C:/Users/jessi/Downloads/neurolens-landing_3.html -->
+<!-- saved from url=(0057)file:///C:/Users/jessi/Downloads/neurolens-landing_5.html -->
 <html lang="pt-BR" data-theme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -209,54 +209,27 @@ h1 em {
   margin-bottom: 40px;
 }
 
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
-}
 
-.btn {
-  font-family: var(--sans);
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-decoration: none;
-  border-radius: 99px;
-  padding: 12px 28px;
-  transition: opacity 0.2s, transform 0.15s;
-  display: inline-block;
-}
-
-.btn:hover { opacity: 0.85; transform: translateY(-1px); }
-.btn:active { transform: translateY(0); }
-
-.btn-solid {
-  background: var(--text);
-  color: var(--bg);
-}
-
-.btn-outline {
-  background: transparent;
-  border: 1.5px solid var(--border);
-  color: var(--muted);
-}
 
 /* =====================
    AVISO
    ===================== */
 .notice {
+  max-width: 1120px;
   margin: 0 auto clamp(48px, 6vw, 80px);
-  width: calc(100% - clamp(40px, 10vw, 128px));
-  max-width: 780px;
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-left: 4px solid var(--duplo);
-  border-radius: var(--radius);
-  padding: clamp(16px, 3vw, 24px) clamp(16px, 3vw, 28px);
+  padding: clamp(16px, 3vw, 24px) clamp(20px, 5vw, 64px);
   font-size: clamp(0.78rem, 1.5vw, 0.88rem);
   color: var(--muted);
   line-height: 1.75;
   box-sizing: border-box;
+}
+
+.notice-inner {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--duplo);
+  border-radius: var(--radius);
+  padding: clamp(16px, 2vw, 20px) clamp(16px, 2vw, 24px);
 }
 
 .notice strong {
@@ -559,11 +532,11 @@ footer {
 </head>
 <body>
 
-<a href="file:///C:/Users/jessi/Downloads/neurolens-landing_3.html#questionarios" class="skip-link">Ir para os questionários</a>
+<a href="file:///C:/Users/jessi/Downloads/neurolens-landing_5.html#questionarios" class="skip-link">Ir para os questionários</a>
 
 <!-- NAV -->
 <nav role="banner">
-  <a href="file:///C:/Users/jessi/Downloads/neurolens-landing_3.html#" class="logo" aria-label="Neuro Lens — início">
+  <a href="file:///C:/Users/jessi/Downloads/neurolens-landing_5.html#" class="logo" aria-label="Neuro Lens — início">
     <span class="logo-mark" aria-hidden="true">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
         <circle cx="12" cy="12" r="4"></circle>
@@ -589,15 +562,14 @@ footer {
   <p class="hero-desc">
     Questionários de triagem para reconhecer padrões de TEA e TDAH — em você, em quem você convive ou nos seus filhos. Desenvolvidos com base nos critérios do DSM-5.
   </p>
-  <div class="hero-actions">
-    <a href="file:///C:/Users/jessi/Downloads/neurolens-landing_3.html#questionarios" class="btn btn-solid">Ver os questionários</a>
-    <a href="file:///C:/Users/jessi/Downloads/neurolens-landing_3.html#como-funciona" class="btn btn-outline">Como funciona</a>
-  </div>
+
 </section>
 
 <!-- AVISO -->
 <aside class="notice" role="note" aria-label="Aviso importante">
-  <strong>Importante:</strong> estes questionários são ferramentas de triagem educacional e não constituem diagnóstico. Se os padrões identificados causarem dificuldades no dia a dia, procure neuropsicólogo, neuropediatra ou psiquiatra especializado em neurodivergência.
+  <div class="notice-inner">
+    <strong>Importante:</strong> estes questionários são ferramentas de triagem educacional e não constituem diagnóstico. Se os padrões identificados causarem dificuldades no dia a dia, procure neuropsicólogo, neuropediatra ou psiquiatra especializado em neurodivergência.
+  </div>
 </aside>
 
 <!-- CARDS -->
